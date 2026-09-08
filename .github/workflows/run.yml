@@ -1,0 +1,42 @@
+name: Job Matcher
+
+on:
+  schedule:
+    # Fires every hour, all day, in UTC. The script's own Israel-timezone-aware
+    # gate (src/schedule-gate.js) decides whether to actually do anything -
+    # keeping the cron simple avoids fragile UTC-offset/DST math here, and the
+    # no-op runs outside 08:00-23:00 Israel time cost nothing on a public repo.
+    - cron: '0 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - run: npm ci
+
+      - run: node src/run.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          RAPIDAPI_JSEARCH_KEY: ${{ secrets.RAPIDAPI_JSEARCH_KEY }}
+
+      - name: Publish updated report and store
+        run: |
+          cp output/matches.html index.html
+          git config user.name "Job Matcher Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html data/jobs-store.json
+          git diff --cached --quiet || git commit -m "Update job matches - $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
