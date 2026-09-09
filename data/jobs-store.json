@@ -166,7 +166,9 @@
     "4446221673",
     "4377259222",
     "4464602105",
-    "4463525087"
+    "4463525087",
+    "4456181508",
+    "4463820368"
   ],
   "matches": [
     {
@@ -2552,6 +2554,38 @@
       "tier": "long_shot",
       "reason": "Role demands low-level C/C++ systems programming, distributed filesystems, and infrastructure expertise fundamentally outside the candidate's primary stack, though software engineering fundamentals and some distributed systems exposure (Node.js, Redis, Bull) provide marginal transferability.",
       "foundAt": "2026-09-09T08:36:42.903Z"
+    },
+    {
+      "id": "4456181508",
+      "title": "xEngineer (Backend Oriented) for Wix Code Infrastructure",
+      "company": "Wix",
+      "location": "Tel Aviv-Yafo, Tel Aviv District, Israel",
+      "country": "IL",
+      "isRemote": false,
+      "description": "Wix makes it possible for anyone to succeed online. Since 2006, we’ve grown to around 4,400 employees in 22 countries, launched over 40 products, and serve over 299 million users and their visitors worldwide. At Wix, we push you to innovate and evolve in non-traditional ways. We operate in collaborative, high-performing teams, building cutting-edge products and leveraging AI to redefine how our users create, manage and grow their dreams online.\nAlthough we’re already industry leaders in web creation and business, our work is nowhere near done. Our goal is to become the main engine of the Internet so we can create a more open web for all.\nWe're proud to be an equal opportunity employer. Wix was built around the idea that everyone has the right to be successful, online. This same vision defines us as an employer: creating a work environment where everyone is welcome, and anyone has the right to succeed.\nJob Description\nJoin the Wix Code Infrastructure team, where you'll build the foundations that power thousands of web applications. You'll develop serverless solutions, build custom database integrations, and design scalable systems that let Wix users build sophisticated web applications without limits.\nOur team owns the critical systems behind our serverless platform. We build infrastructure from the ground up and create custom tooling that lets complex web applications run securely and efficiently at scale. We work closely with DevOps engineers on problems that need innovative approaches and deep technical understanding.\nWe're hands-on builders. We look under the hood to understand how things work, modify existing solutions where that's the right answer, and create entirely new ones when it isn't.\nQualifications\n- 4+ years of professional backend development experience.\n- Strong proficiency in at least one backend language (Go, Java/Scala, Node.js or similar).\n- Experience with distributed systems and microservice architecture.\n- Solid understanding of database technologies and optimization techniques.\n- Experience with containerization and orchestration tools (Kubernetes, Docker, or similar).\n- Ability to write clean, maintainable, well-tested code, with strong problem-solving skills and attention to detail.\n- Technical curiosity — you want to know how things work, not just that they work.\n- Strong communication skills and a collaborative approach to working with a team.\nAn advantage\nFamiliarity with cloud platforms (AWS, GCP, or Azure).",
+      "applyLink": "https://www.linkedin.com/jobs/view/4456181508/",
+      "postedAt": "2026-09-08",
+      "postedRelative": "12 hours ago",
+      "postedTimestamp": "2026-09-08T20:43:58.963Z",
+      "tier": "strong_match",
+      "reason": "Node.js is explicitly listed as an acceptable backend language, AWS is a primary skill, and the candidate has relevant experience with distributed systems concepts (Redis, Bull, Socket.IO), database technologies (MongoDB), and containerization patterns matching the backend infrastructure focus.",
+      "foundAt": "2026-09-09T08:44:46.459Z"
+    },
+    {
+      "id": "4463820368",
+      "title": "Backend Engineer - OT Security Team",
+      "company": "F2 Venture Capital",
+      "location": "Ramat Gan, Tel Aviv District, Israel",
+      "country": "IL",
+      "isRemote": false,
+      "description": "Zero Networks aims to protects tens of thousands of OT devices worldwide by managing enterprise switches directly. We're evolving how we integrate with switches - moving toward more modern network management protocols and a wider range of vendors. You'll own that integration layer end-to-end - backend services and the networking know-how behind them.\n- Design and build the software that talks directly to enterprise network switches: real devices, real production networks, real impact.\n- Push the boundaries of how we manage devices at scale: new protocols, new vendors, better abstractions.\n- Build the cloud backend that turns raw device data into something powerful (Go/C#, gRPC, PostgreSQL).\n- Solve hard, unglamorous distributed-systems problems: concurrency, reliability, scale - with code that ships to production and protects real infrastructure\n- 3-5 years as a backend engineer, proficiency in at least one of Go/C#/Java/C++.\n- Networking knowledge: L2/L3, VLANs, routing, TCP/IP, ACLs.\n- Hands-on experience automating network devices - SSH/CLI, NETCONF, RESTCONF, SNMP, gNMI, Netmiko/NAPALM, or similar.\n- Comfort with concurrent code that has to survive flaky real-world network conditions\nNice to Have\n- Multi-vendor network experience (Cisco, Aruba, and others).\n- Cloud experience (GCP/AWS/Azure) and microservices/gRPC.\n- Experience with flow-based telemetry protocols (IPFIX, NetFlow, sFlow).\nTech Stack\nGo, C#, PostgreSQL, gRPC, GCP, microservices, and standards-based network management protocols.",
+      "applyLink": "https://www.linkedin.com/jobs/view/4463820368/",
+      "postedAt": "2026-09-09",
+      "postedRelative": "2 hours ago",
+      "postedTimestamp": "2026-09-09T06:43:58.963Z",
+      "tier": "long_shot",
+      "reason": "While you have backend experience and cloud/distributed systems exposure (Node.js, AWS, Redis, Socket.IO), the role requires Go/C#/Java/C++ proficiency and specialized networking domain knowledge (L2/L3, NETCONF, SNMP, gNMI) that aren't represented in your skill profile.",
+      "foundAt": "2026-09-09T08:44:48.245Z"
     }
   ]
 }
