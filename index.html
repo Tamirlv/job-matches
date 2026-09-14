@@ -52,6 +52,20 @@
     padding: 14px 16px;
   }
   .job-card.sent-cv { opacity: 0.6; }
+  .job-card.closed h3 { text-decoration: line-through; color: #9ca3af; }
+  .job-card.closed .company { color: #9ca3af; }
+  .closed-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #b91c1c;
+    background: #fee2e2;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
   .job-card-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
   .job-card-header h3 { margin: 0; font-size: 16px; }
   .company { color: #4b5563; font-size: 14px; }
@@ -116,7 +130,7 @@
     <h3>Nodejs Developer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:34:12.685Z">Posted: 29 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:34:12.685Z">Posted: 43 minutes ago</span></div>
   <p class="reason">Perfect alignment with primary stack (Node.js, TypeScript, MongoDB, AWS) and all mandatory requirements; candidate's core daily-driver skills directly match the role's essential backend architecture needs.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464279806/" target="_blank" rel="noopener">View posting</a>
@@ -129,7 +143,7 @@
     <h3>Frontend Developer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:32:12.685Z">Posted: 31 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:32:12.685Z">Posted: 45 minutes ago</span></div>
   <p class="reason">Primary stack includes Angular and TypeScript which directly match the JavaScript/web application requirements, with extensive experience in frontend development, UI design, and reusable component architecture.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464294114/" target="_blank" rel="noopener">View posting</a>
@@ -142,7 +156,7 @@
     <h3>Senior Software Engineer</h3>
     <span class="company">NetApp</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:21:12.685Z">Posted: 42 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:21:12.685Z">Posted: 56 minutes ago</span></div>
   <p class="reason">Primary stack expertise in Node.js, TypeScript, and AWS directly matches core requirements; additional exposure to AI APIs, distributed systems tooling (Redis, Bull, Socket.IO), and cloud technologies aligns well with the autonomous AI systems and SaaS platform focus.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4467082579/" target="_blank" rel="noopener">View posting</a>
@@ -423,19 +437,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4465031249">
-  <div class="job-card-header">
-    <h3>Senior Backend Engineer</h3>
-    <span class="company">Anchor</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T09:21:14.971Z">Posted: 5 days ago</span></div>
-  <p class="reason">Role requires Node.js, Express, and backend architecture expertise which are core primary skills, with additional exposure to relevant technologies like Redis, AWS, and API integrations</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465031249/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4462599328">
   <div class="job-card-header">
     <h3>Full Stack Developer</h3>
@@ -540,45 +541,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4462508221">
-  <div class="job-card-header">
-    <h3>Backend Developer</h3>
-    <span class="company">Nisha - נישה</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:05.321Z">Posted: 6 days ago</span></div>
-  <p class="reason">Node.js and AWS are core primary skills, AI tools (Anthropic/OpenAI/Gemini APIs) are explicitly listed, and backend service development directly matches the role's focus on scalable Node.js backends in cloud environments.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462508221/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464487147">
-  <div class="job-card-header">
-    <h3>Forward Deployed Engineer</h3>
-    <span class="company">Commit</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Petah Tikva, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:04.189Z">Posted: 6 days ago</span></div>
-  <p class="reason">Primary stack includes multiple LLM APIs (Anthropic, OpenAI, Google Gemini), full-stack Node/Express/Angular capabilities, production deployment experience (AWS, Redis, Bull), and real-world integration patterns (Socket.IO, APIs) that directly align with building and deploying AI agents for enterprise customers end-to-end.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464487147/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4462517176">
-  <div class="job-card-header">
-    <h3>Full-Stack Team Leader</h3>
-    <span class="company">Confidential Careers</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:03.102Z">Posted: 6 days ago</span></div>
-  <p class="reason">Candidate has TypeScript, Node.js, Express, AWS as core daily-driver skills matching the MUST requirements for full-stack TypeScript development and AWS expertise, plus relevant exposure to infrastructure/DevOps tooling, though PostgreSQL experience is not evident in the profile.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462517176/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4445993217">
   <div class="job-card-header">
     <h3>Principal Full Stack Engineer – AI Systems &amp; Engineering Automation</h3>
@@ -588,19 +550,6 @@
   <p class="reason">Candidate's primary stack includes TypeScript, Node.js, Express, Angular, multiple LLM APIs (Anthropic, OpenAI, Google Gemini), Redis, Socket.IO, and AWS — directly aligned with the full-stack, AI-native, cloud-native engineering model this role demands, plus documented production LLM and agent experience.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4445993217/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4462519079">
-  <div class="job-card-header">
-    <h3>Angular Frontend Developer</h3>
-    <span class="company">Moveo Group</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:25:58.587Z">Posted: 6 days ago</span></div>
-  <p class="reason">Angular is your primary daily-driver skill and the core requirement; you have exposure to Kafka (in exposure skills) and Node.js backend experience that transfers well to understanding microservices architecture, making this an excellent fit for the role.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462519079/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -618,19 +567,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4462297458">
-  <div class="job-card-header">
-    <h3>Web Software Engineer</h3>
-    <span class="company">Plus500™</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T09:25:43.395Z">Posted: 6 days ago</span></div>
-  <p class="reason">Angular and TypeScript are primary skills matching this JS framework-focused web engineering role, with Node.js backend experience and modern tooling proficiency (Webpack, ESLint, Babel, NPM) covering all stated requirements.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462297458/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4463226652">
   <div class="job-card-header">
     <h3>Senior Full-Stack Platform Engineer – Agentic AI</h3>
@@ -640,19 +576,6 @@
   <p class="reason">Candidate has primary stack expertise in TypeScript, Node.js, Angular (full-stack capable), multiple LLM APIs (Anthropic, OpenAI, Gemini), Redis, and production system patterns; React exposure and familiarity with agentic workflows, API development, and system architecture directly align with core requirements.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4463226652/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464337565">
-  <div class="job-card-header">
-    <h3>Platform Engineer</h3>
-    <span class="company">comblack</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:53.081Z">Posted: 6 days ago</span></div>
-  <p class="reason">Node.js and AWS are core primary skills, and while Terraform/IaC and CI/CD pipeline experience aren't explicitly listed, the platform engineering role type directly transfers from your full-stack cloud development background.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464337565/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -718,19 +641,6 @@
   <p class="reason">Node.js is a primary skill with extensive TypeScript backend experience, MongoDB covers NoSQL bonus requirement, AWS and microservices architecture align well, and proven AI/LLM integration experience (Anthropic, OpenAI, Google Gemini APIs) directly matches the AI workflows integration need.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4440754567/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4462169262">
-  <div class="job-card-header">
-    <h3>Full Stack Software Engineer</h3>
-    <span class="company">Unframe</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-02T14:23:59.515Z">Posted: 02/09/2026</span></div>
-  <p class="reason">Candidate has primary expertise in TypeScript, Node.js, Angular, and multiple LLM APIs (Anthropic, OpenAI, Gemini), with exposure to React and PostgreSQL equivalency through MongoDB experience—all core requirements for an AI-first full-stack role, plus proven AI/LLM integration capability that matches the 'nice to have.'</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462169262/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -956,6 +866,110 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
+<div class="job-card closed" data-job-id="4465031249">
+  <div class="job-card-header">
+    <h3>Senior Backend Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Anchor</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T09:21:14.971Z">Posted: 5 days ago</span></div>
+  <p class="reason">Role requires Node.js, Express, and backend architecture expertise which are core primary skills, with additional exposure to relevant technologies like Redis, AWS, and API integrations</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465031249/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462508221">
+  <div class="job-card-header">
+    <h3>Backend Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Nisha - נישה</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:05.321Z">Posted: 6 days ago</span></div>
+  <p class="reason">Node.js and AWS are core primary skills, AI tools (Anthropic/OpenAI/Gemini APIs) are explicitly listed, and backend service development directly matches the role's focus on scalable Node.js backends in cloud environments.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462508221/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464487147">
+  <div class="job-card-header">
+    <h3>Forward Deployed Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Commit</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Petah Tikva, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:04.189Z">Posted: 6 days ago</span></div>
+  <p class="reason">Primary stack includes multiple LLM APIs (Anthropic, OpenAI, Google Gemini), full-stack Node/Express/Angular capabilities, production deployment experience (AWS, Redis, Bull), and real-world integration patterns (Socket.IO, APIs) that directly align with building and deploying AI agents for enterprise customers end-to-end.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464487147/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462517176">
+  <div class="job-card-header">
+    <h3>Full-Stack Team Leader <span class="closed-badge">Closed</span></h3>
+    <span class="company">Confidential Careers</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:26:03.102Z">Posted: 6 days ago</span></div>
+  <p class="reason">Candidate has TypeScript, Node.js, Express, AWS as core daily-driver skills matching the MUST requirements for full-stack TypeScript development and AWS expertise, plus relevant exposure to infrastructure/DevOps tooling, though PostgreSQL experience is not evident in the profile.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462517176/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462519079">
+  <div class="job-card-header">
+    <h3>Angular Frontend Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Moveo Group</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T12:25:58.587Z">Posted: 6 days ago</span></div>
+  <p class="reason">Angular is your primary daily-driver skill and the core requirement; you have exposure to Kafka (in exposure skills) and Node.js backend experience that transfers well to understanding microservices architecture, making this an excellent fit for the role.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462519079/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462297458">
+  <div class="job-card-header">
+    <h3>Web Software Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Plus500™</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T09:25:43.395Z">Posted: 6 days ago</span></div>
+  <p class="reason">Angular and TypeScript are primary skills matching this JS framework-focused web engineering role, with Node.js backend experience and modern tooling proficiency (Webpack, ESLint, Babel, NPM) covering all stated requirements.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462297458/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464337565">
+  <div class="job-card-header">
+    <h3>Platform Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">comblack</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:53.081Z">Posted: 6 days ago</span></div>
+  <p class="reason">Node.js and AWS are core primary skills, and while Terraform/IaC and CI/CD pipeline experience aren't explicitly listed, the platform engineering role type directly transfers from your full-stack cloud development background.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464337565/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462169262">
+  <div class="job-card-header">
+    <h3>Full Stack Software Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Unframe</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-02T14:23:59.515Z">Posted: 02/09/2026</span></div>
+  <p class="reason">Candidate has primary expertise in TypeScript, Node.js, Angular, and multiple LLM APIs (Anthropic, OpenAI, Gemini), with exposure to React and PostgreSQL equivalency through MongoDB experience—all core requirements for an AI-first full-stack role, plus proven AI/LLM integration capability that matches the 'nice to have.'</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462169262/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
   </div>
 </section>
 <section class="tier-section" data-tier="worth_a_look" style="--tier-accent: #eab308">
@@ -970,7 +984,7 @@
     <h3>Junior Software Engineer</h3>
     <span class="company">Huntrim</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:52:12.685Z">Posted: 11 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:52:12.685Z">Posted: 25 minutes ago</span></div>
   <p class="reason">Strong TypeScript and React frontend match with primary skills, but Python backend is outside your daily-driver stack and the role emphasizes full-stack ownership across both frontend and backend.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464789144/" target="_blank" rel="noopener">View posting</a>
@@ -983,7 +997,7 @@
     <h3>Back End Developer</h3>
     <span class="company">Plaee</span>
   </div>
-  <div class="job-meta"><span class="job-location">Bnei Brak, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:11:12.685Z">Posted: 52 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Bnei Brak, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:11:12.685Z">Posted: 1 hour ago</span></div>
   <p class="reason">Strong primary stack overlap (TypeScript, Node.js, MongoDB, Redis, Bull) and relevant exposure to distributed systems and event-driven architecture, but role prioritizes NestJS/Golang backend expertise and lacks frontend Angular focus, plus missing Kafka, Kubernetes, and Terraform experience.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465764514/" target="_blank" rel="noopener">View posting</a>
@@ -1035,7 +1049,7 @@
     <h3>Software Engineer</h3>
     <span class="company">Cato Networks</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T11:17:11.176Z">Posted: 2 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T11:17:11.176Z">Posted: 3 hours ago</span></div>
   <p class="reason">Strong exposure skills (Java, Redis, MongoDB) and architectural experience align with backend microservices requirements, but primary stack is frontend-heavy (Angular/TypeScript) rather than the Java/Go backend focus, and missing Go entirely.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464789461/" target="_blank" rel="noopener">View posting</a>
@@ -1182,19 +1196,6 @@
   <p class="reason">Strong React and AI/LLM exposure align with frontend orientation and modern development practices, but missing required C# .NET backend stack and primary database technologies (SQL Server) create a significant gap despite full-stack role type being transferable.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4450467169/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4465021306">
-  <div class="job-card-header">
-    <h3>Senior Full stack Engineer</h3>
-    <span class="company">Anchor</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T09:29:46.027Z">Posted: 5 days ago</span></div>
-  <p class="reason">Strong primary stack overlap (TypeScript, Node.js, Angular vs React, AI APIs) and ownership mindset align well, but React requirement (4+ years) and missing Webpack expertise create a meaningful gap against the frontend-focused requirements.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465021306/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -1407,19 +1408,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4464459851">
-  <div class="job-card-header">
-    <h3>Junior Fullstack Developer</h3>
-    <span class="company">Glassix</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T08:25:22.498Z">Posted: 6 days ago</span></div>
-  <p class="reason">Strong primary stack overlap (Redis, MongoDB, AWS) and exposure to React, but the role is .NET Core backend-heavy with SQL as primary database, which sits outside both your daily-driver and exposure stacks, making it a capable but not ideal fit.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464459851/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4464381335">
   <div class="job-card-header">
     <h3>Senior Software Engineer, Shared Platform Services</h3>
@@ -1433,19 +1421,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4464380427">
-  <div class="job-card-header">
-    <h3>Software AI Engineer</h3>
-    <span class="company">Gini-Apps</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T18:25:20.328Z">Posted: 6 days ago</span></div>
-  <p class="reason">Strong match on Full Stack (Angular/TypeScript frontend + Node.js/Express backend), AI/LLM integration (Anthropic, OpenAI, Gemini APIs), AWS, and automation capabilities, but Python/FastAPI and React are exposure-level skills rather than primary stack, and role emphasizes Python as primary backend language which is outside your core expertise.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464380427/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4462233155">
   <div class="job-card-header">
     <h3>Senior Full Stack Engineer</h3>
@@ -1455,19 +1430,6 @@
   <p class="reason">Strong match on Node.js/TypeScript BFF, full-stack architecture, and modern tooling (Claude/Cursor fluency), but lack of .NET/C# middleware experience and regulated banking SDLC exposure prevents a strong_match despite excellent frontend (React exposure) and backend foundations.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462233155/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464345831">
-  <div class="job-card-header">
-    <h3>Back End Developer</h3>
-    <span class="company">Plaee</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T16:25:36.943Z">Posted: 6 days ago</span></div>
-  <p class="reason">Strong backend architecture expertise (Node.js/Express, MongoDB, Redis, Bull, microservices patterns) and exposure to Kafka/Elasticsearch directly transfers to the role's core needs, but missing NestJS and Golang proficiency, plus lacking explicit DevOps/infrastructure experience (Kubernetes, Terraform, GitHub Actions) prevents a higher tier despite solid foundational fit.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464345831/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -1862,6 +1824,58 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
+<div class="job-card closed" data-job-id="4465021306">
+  <div class="job-card-header">
+    <h3>Senior Full stack Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Anchor</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T09:29:46.027Z">Posted: 5 days ago</span></div>
+  <p class="reason">Strong primary stack overlap (TypeScript, Node.js, Angular vs React, AI APIs) and ownership mindset align well, but React requirement (4+ years) and missing Webpack expertise create a meaningful gap against the frontend-focused requirements.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465021306/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464459851">
+  <div class="job-card-header">
+    <h3>Junior Fullstack Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Glassix</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T08:25:22.498Z">Posted: 6 days ago</span></div>
+  <p class="reason">Strong primary stack overlap (Redis, MongoDB, AWS) and exposure to React, but the role is .NET Core backend-heavy with SQL as primary database, which sits outside both your daily-driver and exposure stacks, making it a capable but not ideal fit.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464459851/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464380427">
+  <div class="job-card-header">
+    <h3>Software AI Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Gini-Apps</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T18:25:20.328Z">Posted: 6 days ago</span></div>
+  <p class="reason">Strong match on Full Stack (Angular/TypeScript frontend + Node.js/Express backend), AI/LLM integration (Anthropic, OpenAI, Gemini APIs), AWS, and automation capabilities, but Python/FastAPI and React are exposure-level skills rather than primary stack, and role emphasizes Python as primary backend language which is outside your core expertise.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464380427/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464345831">
+  <div class="job-card-header">
+    <h3>Back End Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Plaee</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T16:25:36.943Z">Posted: 6 days ago</span></div>
+  <p class="reason">Strong backend architecture expertise (Node.js/Express, MongoDB, Redis, Bull, microservices patterns) and exposure to Kafka/Elasticsearch directly transfers to the role's core needs, but missing NestJS and Golang proficiency, plus lacking explicit DevOps/infrastructure experience (Kubernetes, Terraform, GitHub Actions) prevents a higher tier despite solid foundational fit.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464345831/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
   </div>
 </section>
 <section class="tier-section" data-tier="long_shot" style="--tier-accent: #f97316">
@@ -1876,7 +1890,7 @@
     <h3>C++ Software Engineer</h3>
     <span class="company">Mobileye</span>
   </div>
-  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T14:01:12.685Z">Posted: 2 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T14:01:12.685Z">Posted: 16 minutes ago</span></div>
   <p class="reason">C++ is outside both skill lists and the role is C++-primary backend work, but the candidate has strong software engineering fundamentals, CI/CD pipeline experience, and exposure to relevant tools (Node.js/TypeScript backend patterns, system architecture thinking) that could transfer, though this is a meaningful skill gap.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465762693/" target="_blank" rel="noopener">View posting</a>
@@ -1889,7 +1903,7 @@
     <h3>Software Engineer</h3>
     <span class="company">Dialog</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:36:12.685Z">Posted: 27 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:36:12.685Z">Posted: 41 minutes ago</span></div>
   <p class="reason">Core backend systems role requiring C++/Rust/Go expertise sits outside primary stack (Node.js/TypeScript), though Java exposure and strong distributed systems understanding from Redis/Bull/Socket.IO experience provide some transferable foundation for database engine work.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464718847/" target="_blank" rel="noopener">View posting</a>
@@ -1902,7 +1916,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:33:12.685Z">Posted: 30 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:33:12.685Z">Posted: 44 minutes ago</span></div>
   <p class="reason">Strong match on React, AWS, and full-stack capabilities, but Python is mandatory primary language (60% backend focus) and represents a significant gap from the Node.js/TypeScript primary stack, while AI/ML exposure and product company experience provide some mitigation.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464270813/" target="_blank" rel="noopener">View posting</a>
@@ -1915,7 +1929,7 @@
     <h3>Java Software Engineer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:31:12.685Z">Posted: 32 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:31:12.685Z">Posted: 46 minutes ago</span></div>
   <p class="reason">Primary stack is Node.js/TypeScript backend, not Java, but AWS cloud and microservices architecture experience transfer well enough to warrant consideration despite the Java requirement mismatch.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464287192/" target="_blank" rel="noopener">View posting</a>
@@ -1928,7 +1942,7 @@
     <h3>Senior Software Engineer - C++ Embedded Systems (Autonomous Driving)</h3>
     <span class="company">Mobileye</span>
   </div>
-  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:13:12.685Z">Posted: 50 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:13:12.685Z">Posted: 1 hour ago</span></div>
   <p class="reason">C++ embedded systems expertise is outside the primary stack (which is JavaScript/TypeScript-focused), but the role type involves software architecture, performance optimization, and distributed systems concepts that partially transfer from backend experience with Node.js, Express, and related technologies.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4447647823/" target="_blank" rel="noopener">View posting</a>
@@ -2010,19 +2024,6 @@
   <p class="reason">The role requires Python/Go backend expertise with Kubernetes and relational databases as core requirements, while your primary stack is TypeScript/Node.js/MongoDB; Python and Go are outside both your primary and exposure skill lists, making this a significant stack mismatch despite relevant distributed systems and backend architecture experience.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4370577011/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464772982">
-  <div class="job-card-header">
-    <h3>Software Developer - VPN Core Team</h3>
-    <span class="company">Check Point Software</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T09:09:01.240Z">Posted: 4 hours ago</span></div>
-  <p class="reason">Role requires C/C++ system-level and networking expertise as primary stack, which falls outside the candidate's daily-driver technologies; candidate has no listed experience with C/C++, Linux, networking protocols, or cryptography, though the problem-solving and backend experience from Node.js/Express could transfer to core systems work.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464772982/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -2222,58 +2223,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4465043218">
-  <div class="job-card-header">
-    <h3>Full Stack Engineer</h3>
-    <span class="company">Rafael Advanced Defense Systems</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:57:01.511Z">Posted: 5 days ago</span></div>
-  <p class="reason">Role requires Python as primary backend (5+ years) with distributed systems expertise, but your core stack is Node.js/Express; React frontend matches, but the Python-first requirement and defense/aerospace domain complexity make this a significant stretch despite transferable full-stack experience.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465043218/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4465014694">
-  <div class="job-card-header">
-    <h3>Backend AI Developer</h3>
-    <span class="company">Compie Technologies</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Beer Yaakov, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:00:02.176Z">Posted: 5 days ago</span></div>
-  <p class="reason">Strong LLM/GenAI experience with Anthropic and OpenAI APIs, but primary stack is TypeScript/Node.js backend rather than Python, lacking mandatory Python proficiency, SQL experience, and LangChain/LangGraph exposure despite relevant AI model integration background.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465014694/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4463011790">
-  <div class="job-card-header">
-    <h3>Lead Java Developer</h3>
-    <span class="company">Logica-IT</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Rishon LeZion, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:00:01.700Z">Posted: 5 days ago</span></div>
-  <p class="reason">Java is exposure-level skill only while the role demands 5+ years of hands-on Java/Spring Boot as core requirements, but MongoDB and AWS overlap with primary stack and the backend development type is transferable.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4463011790/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4462597273">
-  <div class="job-card-header">
-    <h3>Java Backend Developer</h3>
-    <span class="company">MatchPointIT</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Rishon LeZion, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T07:57:30.075Z">Posted: 5 days ago</span></div>
-  <p class="reason">Java is listed as exposure-level experience only, while this role mandates 6+ years of hands-on Java as primary requirement; the backend architecture (Spring Boot, Microservices, REST APIs) transfers well from candidate's Node.js/Express expertise, but the Java-primary stack and banking domain specialization create meaningful gaps versus roles matching the primary skill list.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462597273/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4463004001">
   <div class="job-card-header">
     <h3>Full Stack Developer</h3>
@@ -2296,19 +2245,6 @@
   <p class="reason">Strong distributed systems and backend foundations (Node.js, Express, AWS experience) transfer to the role type, but lacks the required Go/C#/Java/C++ primary proficiency and has no demonstrated networking protocols or OT/network device automation experience.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4463820368/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464993155">
-  <div class="job-card-header">
-    <h3>Backend &amp; Data Developer</h3>
-    <span class="company">MatchPointIT</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Lod, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T06:26:30.075Z">Posted: 5 days ago</span></div>
-  <p class="reason">C# / .NET Core is outside the primary stack, but Kafka and AWS experience from exposure skills, plus Node.js backend expertise, make the data engineering role type transferable with significant ramp-up required.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464993155/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -2374,19 +2310,6 @@
   <p class="reason">Role requires C++, Python, and low-level hardware-software security expertise as core skills, which are outside your primary stack; while you have some exposure to Python-adjacent work and AI APIs, the emphasis on micro-architecture, side-channel vulnerabilities, and systems-level performance optimization is a significant departure from your fullstack TypeScript/Node.js background.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4463501967/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464612998">
-  <div class="job-card-header">
-    <h3>Senior Java Software Engineer</h3>
-    <span class="company">Sunbit</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T15:33:01.276Z">Posted: 5 days ago</span></div>
-  <p class="reason">Java is in exposure skills only (not primary stack), and the role requires Java/Kotlin as primary language with Spring framework focus, but the candidate has transferable backend architecture experience with Node.js/Express and fintech-adjacent skills (payment processing adjacent via Stripe, financial data handling) that could bridge the gap.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464612998/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -2560,32 +2483,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4460498556">
-  <div class="job-card-header">
-    <h3>Junior Software Engineer</h3>
-    <span class="company">LIBBA Inc.</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Haifa, Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T06:25:50.918Z">Posted: 6 days ago</span></div>
-  <p class="reason">The role requires C/C++ and embedded systems expertise (Linux/Android kernel level) which is outside the primary stack, though exposure to C and the architectural thinking from full-stack development shows some transferable problem-solving skills.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4460498556/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4460883379">
-  <div class="job-card-header">
-    <h3>Senior C# Backend Engineer</h3>
-    <span class="company">Yael Korentec Technologies</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Yehud Monosson, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T05:25:34.708Z">Posted: 6 days ago</span></div>
-  <p class="reason">Backend role type transfers well and candidate has microservices/distributed systems exposure (Node.js, Express, Kafka, AWS), database design skills (MongoDB, SQL exposure), and security fundamentals (JWT, bcrypt), but the C# / .NET Core stack is entirely outside both primary and exposure skill lists, creating a significant technology gap despite architectural conceptual overlap.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4460883379/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4462978680">
   <div class="job-card-header">
     <h3>Senior Software Engineer - Backend Platform</h3>
@@ -2638,19 +2535,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4462681420">
-  <div class="job-card-header">
-    <h3>Full Stack Developer (PHP/Laravel + React)</h3>
-    <span class="company">Moveo Source</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T16:25:16.010Z">Posted: 6 days ago</span></div>
-  <p class="reason">Strong full-stack capability and AWS expertise transfer well, but lacks primary experience with PHP/Laravel (the must-have backend stack) and MSSQL, with only React overlap on frontend despite excellent TypeScript/Angular foundation.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462681420/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4445633104">
   <div class="job-card-header">
     <h3>Staff Software Engineer</h3>
@@ -2686,19 +2570,6 @@
   <p class="reason">C++ is outside both primary and exposure skill lists, and while the role type (systems/embedded software) could transfer from your backend/full-stack experience, the core language mismatch and automotive/real-time systems focus present a significant technical gap.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4444831652/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
-<div class="job-card" data-job-id="4464356193">
-  <div class="job-card-header">
-    <h3>Integration Developer (37525)</h3>
-    <span class="company">מרטנס | Mertens – מקבוצת מלם תים</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:49.823Z">Posted: 6 days ago</span></div>
-  <p class="reason">Strong API/integration conceptual overlap and cloud experience (AWS/GCP), but missing primary required stack (MuleSoft, BizTalk, DotNet/Java, SQL Server) with no direct experience in enterprise integration platforms or message-oriented middleware.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464356193/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
@@ -2963,19 +2834,6 @@
     <button type="button" class="delete-btn">Remove</button>
   </div>
 </div>
-<div class="job-card" data-job-id="4451504671">
-  <div class="job-card-header">
-    <h3>Back End Developer</h3>
-    <span class="company">Medulla</span>
-  </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-08-11T14:24:18.379Z">Posted: 11/08/2026</span></div>
-  <p class="reason">Backend role requiring Go as primary language with Java/Scala/Python/C++/C secondary experience, but candidate's core stack is Node.js/Express without Go or the listed compiled/statically-typed languages, though the AI/agent domain and backend focus show conceptual alignment.</p>
-  <div class="job-actions">
-    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4451504671/" target="_blank" rel="noopener">View posting</a>
-    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
-    <button type="button" class="delete-btn">Remove</button>
-  </div>
-</div>
 <div class="job-card" data-job-id="4437217419">
   <div class="job-card-header">
     <h3>Java Developer</h3>
@@ -3050,6 +2908,162 @@
   <p class="reason">Primary stack is JavaScript/TypeScript-based while role requires Python as core language, but AWS expertise and large-scale systems experience from primary skills provide some transferable value for a backend infrastructure role.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4365778151/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464772982">
+  <div class="job-card-header">
+    <h3>Software Developer - VPN Core Team <span class="closed-badge">Closed</span></h3>
+    <span class="company">Check Point Software</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T09:09:01.240Z">Posted: 5 hours ago</span></div>
+  <p class="reason">Role requires C/C++ system-level and networking expertise as primary stack, which falls outside the candidate's daily-driver technologies; candidate has no listed experience with C/C++, Linux, networking protocols, or cryptography, though the problem-solving and backend experience from Node.js/Express could transfer to core systems work.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464772982/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4465043218">
+  <div class="job-card-header">
+    <h3>Full Stack Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Rafael Advanced Defense Systems</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:57:01.511Z">Posted: 5 days ago</span></div>
+  <p class="reason">Role requires Python as primary backend (5+ years) with distributed systems expertise, but your core stack is Node.js/Express; React frontend matches, but the Python-first requirement and defense/aerospace domain complexity make this a significant stretch despite transferable full-stack experience.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465043218/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4465014694">
+  <div class="job-card-header">
+    <h3>Backend AI Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Compie Technologies</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Beer Yaakov, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:00:02.176Z">Posted: 5 days ago</span></div>
+  <p class="reason">Strong LLM/GenAI experience with Anthropic and OpenAI APIs, but primary stack is TypeScript/Node.js backend rather than Python, lacking mandatory Python proficiency, SQL experience, and LangChain/LangGraph exposure despite relevant AI model integration background.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465014694/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4463011790">
+  <div class="job-card-header">
+    <h3>Lead Java Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Logica-IT</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Rishon LeZion, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T11:00:01.700Z">Posted: 5 days ago</span></div>
+  <p class="reason">Java is exposure-level skill only while the role demands 5+ years of hands-on Java/Spring Boot as core requirements, but MongoDB and AWS overlap with primary stack and the backend development type is transferable.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4463011790/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462597273">
+  <div class="job-card-header">
+    <h3>Java Backend Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">MatchPointIT</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Rishon LeZion, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T07:57:30.075Z">Posted: 5 days ago</span></div>
+  <p class="reason">Java is listed as exposure-level experience only, while this role mandates 6+ years of hands-on Java as primary requirement; the backend architecture (Spring Boot, Microservices, REST APIs) transfers well from candidate's Node.js/Express expertise, but the Java-primary stack and banking domain specialization create meaningful gaps versus roles matching the primary skill list.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462597273/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464993155">
+  <div class="job-card-header">
+    <h3>Backend &amp; Data Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">MatchPointIT</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Lod, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-09T06:26:30.075Z">Posted: 5 days ago</span></div>
+  <p class="reason">C# / .NET Core is outside the primary stack, but Kafka and AWS experience from exposure skills, plus Node.js backend expertise, make the data engineering role type transferable with significant ramp-up required.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464993155/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464612998">
+  <div class="job-card-header">
+    <h3>Senior Java Software Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Sunbit</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T15:33:01.276Z">Posted: 5 days ago</span></div>
+  <p class="reason">Java is in exposure skills only (not primary stack), and the role requires Java/Kotlin as primary language with Spring framework focus, but the candidate has transferable backend architecture experience with Node.js/Express and fintech-adjacent skills (payment processing adjacent via Stripe, financial data handling) that could bridge the gap.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464612998/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4460498556">
+  <div class="job-card-header">
+    <h3>Junior Software Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">LIBBA Inc.</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Haifa, Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T06:25:50.918Z">Posted: 6 days ago</span></div>
+  <p class="reason">The role requires C/C++ and embedded systems expertise (Linux/Android kernel level) which is outside the primary stack, though exposure to C and the architectural thinking from full-stack development shows some transferable problem-solving skills.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4460498556/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4460883379">
+  <div class="job-card-header">
+    <h3>Senior C# Backend Engineer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Yael Korentec Technologies</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Yehud Monosson, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-08T05:25:34.708Z">Posted: 6 days ago</span></div>
+  <p class="reason">Backend role type transfers well and candidate has microservices/distributed systems exposure (Node.js, Express, Kafka, AWS), database design skills (MongoDB, SQL exposure), and security fundamentals (JWT, bcrypt), but the C# / .NET Core stack is entirely outside both primary and exposure skill lists, creating a significant technology gap despite architectural conceptual overlap.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4460883379/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4462681420">
+  <div class="job-card-header">
+    <h3>Full Stack Developer (PHP/Laravel + React) <span class="closed-badge">Closed</span></h3>
+    <span class="company">Moveo Source</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T16:25:16.010Z">Posted: 6 days ago</span></div>
+  <p class="reason">Strong full-stack capability and AWS expertise transfer well, but lacks primary experience with PHP/Laravel (the must-have backend stack) and MSSQL, with only React overlap on frontend despite excellent TypeScript/Angular foundation.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462681420/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4464356193">
+  <div class="job-card-header">
+    <h3>Integration Developer (37525) <span class="closed-badge">Closed</span></h3>
+    <span class="company">מרטנס | Mertens – מקבוצת מלם תים</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:49.823Z">Posted: 6 days ago</span></div>
+  <p class="reason">Strong API/integration conceptual overlap and cloud experience (AWS/GCP), but missing primary required stack (MuleSoft, BizTalk, DotNet/Java, SQL Server) with no direct experience in enterprise integration platforms or message-oriented middleware.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464356193/" target="_blank" rel="noopener">View posting</a>
+    <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
+    <button type="button" class="delete-btn">Remove</button>
+  </div>
+</div>
+<div class="job-card closed" data-job-id="4451504671">
+  <div class="job-card-header">
+    <h3>Back End Developer <span class="closed-badge">Closed</span></h3>
+    <span class="company">Medulla</span>
+  </div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-08-11T14:24:18.379Z">Posted: 11/08/2026</span></div>
+  <p class="reason">Backend role requiring Go as primary language with Java/Scala/Python/C++/C secondary experience, but candidate's core stack is Node.js/Express without Go or the listed compiled/statically-typed languages, though the AI/agent domain and backend focus show conceptual alignment.</p>
+  <div class="job-actions">
+    <a class="apply-link" href="https://www.linkedin.com/jobs/view/4451504671/" target="_blank" rel="noopener">View posting</a>
     <label class="sent-cv-label"><input type="checkbox" class="sent-cv-checkbox"> Sent CV</label>
     <button type="button" class="delete-btn">Remove</button>
   </div>
