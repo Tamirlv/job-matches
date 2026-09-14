@@ -88,9 +88,10 @@
   .delete-btn:hover { background: #fee2e2; border-color: #fca5a5; color: #b91c1c; }
   .pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 14px;
+    gap: 8px;
     margin-bottom: 16px;
     position: sticky;
     top: 60px;
@@ -108,6 +109,14 @@
   }
   .pagination button:disabled { opacity: 0.4; cursor: default; }
   .page-indicator { font-size: 13px; color: #6b7280; }
+  .page-jump-input {
+    width: 48px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 5px 6px;
+    font-size: 13px;
+    text-align: center;
+  }
   .empty-message { color: #6b7280; font-size: 14px; }
 </style>
 </head>
@@ -120,9 +129,13 @@
 </div>
 <section class="tier-section active" data-tier="strong_match" style="--tier-accent: #22c55e">
   <div class="pagination">
-    <button type="button" class="prev-page">&laquo; Prev</button>
+    <button type="button" class="first-page" title="First page">&laquo;</button>
+    <button type="button" class="prev-page">&lsaquo; Prev</button>
     <span class="page-indicator">Page 1</span>
-    <button type="button" class="next-page">Next &raquo;</button>
+    <input type="number" class="page-jump-input" min="1" inputmode="numeric" placeholder="#" aria-label="Jump to page">
+    <button type="button" class="page-jump-btn">Go</button>
+    <button type="button" class="next-page">Next &rsaquo;</button>
+    <button type="button" class="last-page" title="Last page">&raquo;</button>
   </div>
   <div class="cards-container">
 <div class="job-card" data-job-id="4464279806">
@@ -130,7 +143,7 @@
     <h3>Nodejs Developer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:34:12.685Z">Posted: 43 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:34:12.685Z">Posted: 51 minutes ago</span></div>
   <p class="reason">Perfect alignment with primary stack (Node.js, TypeScript, MongoDB, AWS) and all mandatory requirements; candidate's core daily-driver skills directly match the role's essential backend architecture needs.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464279806/" target="_blank" rel="noopener">View posting</a>
@@ -143,7 +156,7 @@
     <h3>Frontend Developer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:32:12.685Z">Posted: 45 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:32:12.685Z">Posted: 53 minutes ago</span></div>
   <p class="reason">Primary stack includes Angular and TypeScript which directly match the JavaScript/web application requirements, with extensive experience in frontend development, UI design, and reusable component architecture.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464294114/" target="_blank" rel="noopener">View posting</a>
@@ -156,7 +169,7 @@
     <h3>Senior Software Engineer</h3>
     <span class="company">NetApp</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:21:12.685Z">Posted: 56 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:21:12.685Z">Posted: 1 hour ago</span></div>
   <p class="reason">Primary stack expertise in Node.js, TypeScript, and AWS directly matches core requirements; additional exposure to AI APIs, distributed systems tooling (Redis, Bull, Socket.IO), and cloud technologies aligns well with the autonomous AI systems and SaaS platform focus.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4467082579/" target="_blank" rel="noopener">View posting</a>
@@ -221,7 +234,7 @@
     <h3>xEngineer for Wix Headless</h3>
     <span class="company">Wix</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T11:20:01.085Z">Posted: 2 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T11:20:01.085Z">Posted: 3 hours ago</span></div>
   <p class="reason">Candidate has primary expertise in TypeScript, Node.js, Express, and full-stack architecture with proven ability to own end-to-end systems, directly matching the core technical requirements and product-ownership mindset Wix Headless seeks.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4467070777/" target="_blank" rel="noopener">View posting</a>
@@ -585,7 +598,7 @@
     <h3>Principal Senior Frontend and UX Engineer</h3>
     <span class="company">Merck Healthcare</span>
   </div>
-  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:45.605Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:45.605Z">Posted: 07/09/2026</span></div>
   <p class="reason">Angular and TypeScript are core primary skills matching the modern web framework requirement, combined with extensive AI/LLM API experience (Anthropic, OpenAI, Gemini) perfectly aligning with the AI-enabled interface design focus, plus exposure to React and accessibility/design system practices for the UX design aspects.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4455303144/" target="_blank" rel="noopener">View posting</a>
@@ -598,7 +611,7 @@
     <h3>Senior Backend Engineer (Node.js)</h3>
     <span class="company">Commit</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:31.387Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:31.387Z">Posted: 07/09/2026</span></div>
   <p class="reason">Candidate's primary stack directly aligns with all must-haves: Node.js, TypeScript, MongoDB, Redis, AWS experience, plus event-driven architecture exposure through Bull and Socket.IO; no disqualifying gaps.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464315679/" target="_blank" rel="noopener">View posting</a>
@@ -611,7 +624,7 @@
     <h3>Principal Frontend Engineer (Cortex Platform)</h3>
     <span class="company">Palo Alto Networks</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:47.497Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:47.497Z">Posted: 07/09/2026</span></div>
   <p class="reason">Expert Angular and TypeScript match primary stack, extensive frontend architecture experience aligns perfectly with core responsibilities, and demonstrated AI API integration (Anthropic, OpenAI, Gemini) directly supports the AI-first development focus of the role.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4451798311/" target="_blank" rel="noopener">View posting</a>
@@ -974,9 +987,13 @@
 </section>
 <section class="tier-section" data-tier="worth_a_look" style="--tier-accent: #eab308">
   <div class="pagination">
-    <button type="button" class="prev-page">&laquo; Prev</button>
+    <button type="button" class="first-page" title="First page">&laquo;</button>
+    <button type="button" class="prev-page">&lsaquo; Prev</button>
     <span class="page-indicator">Page 1</span>
-    <button type="button" class="next-page">Next &raquo;</button>
+    <input type="number" class="page-jump-input" min="1" inputmode="numeric" placeholder="#" aria-label="Jump to page">
+    <button type="button" class="page-jump-btn">Go</button>
+    <button type="button" class="next-page">Next &rsaquo;</button>
+    <button type="button" class="last-page" title="Last page">&raquo;</button>
   </div>
   <div class="cards-container">
 <div class="job-card" data-job-id="4464789144">
@@ -984,7 +1001,7 @@
     <h3>Junior Software Engineer</h3>
     <span class="company">Huntrim</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:52:12.685Z">Posted: 25 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:52:12.685Z">Posted: 33 minutes ago</span></div>
   <p class="reason">Strong TypeScript and React frontend match with primary skills, but Python backend is outside your daily-driver stack and the role emphasizes full-stack ownership across both frontend and backend.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464789144/" target="_blank" rel="noopener">View posting</a>
@@ -1452,7 +1469,7 @@
     <h3>Senior Backend Engineer</h3>
     <span class="company">Blaise</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:41.124Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:41.124Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong primary stack overlap (Node.js, Express, TypeScript, MongoDB, Redis, AWS, AI APIs) and direct LLM/AI integration experience, but role explicitly prioritizes Python and relational databases as core requirements where candidate has minimal stated experience.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4462225393/" target="_blank" rel="noopener">View posting</a>
@@ -1465,7 +1482,7 @@
     <h3>*Senior Backend Engineer - Collection Engineering</h3>
     <span class="company">SentinelOne</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:27.994Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:27.994Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong match on backend fundamentals (microservices, cloud, databases, Docker/Kubernetes) and exposure skills (Java, AWS, Kafka, Elasticsearch), but primary stack is Node.js/TypeScript while role emphasizes Python/Go/Java and lacks overlap on AI APIs and real-time frameworks that define your daily driver.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464342391/" target="_blank" rel="noopener">View posting</a>
@@ -1478,7 +1495,7 @@
     <h3>Software Engineer</h3>
     <span class="company">Rafael Advanced Defense Systems</span>
   </div>
-  <div class="job-meta"><span class="job-location">Kiryat Bialik, Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:23.616Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Kiryat Bialik, Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:23.616Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong Angular/frontend match and TypeScript overlap, but primary backend stack (Node.js/Express/MongoDB) doesn't match the Java/.NET/Python requirement, though the distributed systems and full-stack development experience transfer well.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464317891/" target="_blank" rel="noopener">View posting</a>
@@ -1491,7 +1508,7 @@
     <h3>Software Engineer II, Google SecOps</h3>
     <span class="company">Google</span>
   </div>
-  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:21.398Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:21.398Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong full-stack capabilities (TypeScript, Node.js, Angular) and AI/LLM experience (Anthropic, OpenAI, Google Gemini APIs) align with core responsibilities, but the role emphasizes backend languages (Python, Go, C++) and Google Cloud-specific security infrastructure that fall outside the primary stack.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4454243686/" target="_blank" rel="noopener">View posting</a>
@@ -1504,7 +1521,7 @@
     <h3>Senior Full Stack Developer</h3>
     <span class="company">SeatPick</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:19.290Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:19.290Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong TypeScript and full-stack capabilities align well, but lack of Next.js (requires React foundation) and Python as primary skills, combined with MongoDB/Node.js focus rather than RDBMS/Python backend, makes this a moderate fit rather than strong.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464324656/" target="_blank" rel="noopener">View posting</a>
@@ -1517,7 +1534,7 @@
     <h3>Software Developer</h3>
     <span class="company">Check Point Software</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:18.228Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:18.228Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong Angular/TypeScript/AWS/AI API expertise and full-stack capability align well, but the role's Python-primary backend requirement and PostgreSQL/DynamoDB/Kafka focus diverge from your Node.js/Express/MongoDB core stack.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464332762/" target="_blank" rel="noopener">View posting</a>
@@ -1880,9 +1897,13 @@
 </section>
 <section class="tier-section" data-tier="long_shot" style="--tier-accent: #f97316">
   <div class="pagination">
-    <button type="button" class="prev-page">&laquo; Prev</button>
+    <button type="button" class="first-page" title="First page">&laquo;</button>
+    <button type="button" class="prev-page">&lsaquo; Prev</button>
     <span class="page-indicator">Page 1</span>
-    <button type="button" class="next-page">Next &raquo;</button>
+    <input type="number" class="page-jump-input" min="1" inputmode="numeric" placeholder="#" aria-label="Jump to page">
+    <button type="button" class="page-jump-btn">Go</button>
+    <button type="button" class="next-page">Next &rsaquo;</button>
+    <button type="button" class="last-page" title="Last page">&raquo;</button>
   </div>
   <div class="cards-container">
 <div class="job-card" data-job-id="4465762693">
@@ -1890,7 +1911,7 @@
     <h3>C++ Software Engineer</h3>
     <span class="company">Mobileye</span>
   </div>
-  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T14:01:12.685Z">Posted: 16 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T14:01:12.685Z">Posted: 24 minutes ago</span></div>
   <p class="reason">C++ is outside both skill lists and the role is C++-primary backend work, but the candidate has strong software engineering fundamentals, CI/CD pipeline experience, and exposure to relevant tools (Node.js/TypeScript backend patterns, system architecture thinking) that could transfer, though this is a meaningful skill gap.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4465762693/" target="_blank" rel="noopener">View posting</a>
@@ -1903,7 +1924,7 @@
     <h3>Software Engineer</h3>
     <span class="company">Dialog</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:36:12.685Z">Posted: 41 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:36:12.685Z">Posted: 49 minutes ago</span></div>
   <p class="reason">Core backend systems role requiring C++/Rust/Go expertise sits outside primary stack (Node.js/TypeScript), though Java exposure and strong distributed systems understanding from Redis/Bull/Socket.IO experience provide some transferable foundation for database engine work.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464718847/" target="_blank" rel="noopener">View posting</a>
@@ -1916,7 +1937,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:33:12.685Z">Posted: 44 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:33:12.685Z">Posted: 52 minutes ago</span></div>
   <p class="reason">Strong match on React, AWS, and full-stack capabilities, but Python is mandatory primary language (60% backend focus) and represents a significant gap from the Node.js/TypeScript primary stack, while AI/ML exposure and product company experience provide some mitigation.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464270813/" target="_blank" rel="noopener">View posting</a>
@@ -1929,7 +1950,7 @@
     <h3>Java Software Engineer</h3>
     <span class="company">Gotfriends</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:31:12.685Z">Posted: 46 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-14T13:31:12.685Z">Posted: 54 minutes ago</span></div>
   <p class="reason">Primary stack is Node.js/TypeScript backend, not Java, but AWS cloud and microservices architecture experience transfer well enough to warrant consideration despite the Java requirement mismatch.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4464287192/" target="_blank" rel="noopener">View posting</a>
@@ -2592,7 +2613,7 @@
     <h3>Principal Full-Stack Software Engineer</h3>
     <span class="company">Merck Healthcare</span>
   </div>
-  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:24.704Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Jerusalem District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:25:24.704Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong overlap on full-stack architecture, APIs, databases, testing, CI/CD, and AI integration patterns, but the required primary expertise in Python and the absence of Python from your daily-driver stack is a significant gap for a Principal-level role in a regulated pharma environment.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4455302163/" target="_blank" rel="noopener">View posting</a>
@@ -2605,7 +2626,7 @@
     <h3>Senior Software Engineer - SONiC Design Group</h3>
     <span class="company">NVIDIA AI</span>
   </div>
-  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:53.290Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:53.290Z">Posted: 07/09/2026</span></div>
   <p class="reason">Role is C++/Python/Linux systems programming for network OS development, which is outside the primary stack (no C++ depth, Python not listed), but the candidate's backend engineering experience, systems-level thinking with Node.js/Express, and exposure to infrastructure tools (Redis, Kafka, AWS) show transferable problem-solving skills that could enable learning the required low-level networking stack.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4461843517/" target="_blank" rel="noopener">View posting</a>
@@ -2618,7 +2639,7 @@
     <h3>Senior Back End Developer</h3>
     <span class="company">Kendago</span>
   </div>
-  <div class="job-meta"><span class="job-location">Kiryat Ono, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:23.986Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Kiryat Ono, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-07T14:24:23.986Z">Posted: 07/09/2026</span></div>
   <p class="reason">Strong backend systems and data pipeline experience from Node.js/Express stack transfers well, but role is Python-primary (FastAPI/Django) and you lack the required 5+ years of production Python development - your Python is exposure-level only.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4452975842/" target="_blank" rel="noopener">View posting</a>
@@ -3093,16 +3114,25 @@
       }
     }
 
+    function getVisibleCards(section) {
+      var allCards = section.querySelectorAll('.job-card');
+      return Array.prototype.filter.call(allCards, function (c) {
+        return c.getAttribute('data-dismissed') !== 'true';
+      });
+    }
+
+    function getTotalPages(section) {
+      return Math.max(1, Math.ceil(getVisibleCards(section).length / PAGE_SIZE));
+    }
+
     function repaginateVisible(section) {
       // Re-run the display pass over ALL cards (including hidden-by-dismiss ones,
       // which stay display:none permanently) using the current page.
-      var allCards = section.querySelectorAll('.job-card');
-      var visibleCards = Array.prototype.filter.call(allCards, function (c) {
-        return c.getAttribute('data-dismissed') !== 'true';
-      });
+      var visibleCards = getVisibleCards(section);
       var pageAttr = parseInt(section.getAttribute('data-page') || '1', 10);
-      var totalPages = Math.max(1, Math.ceil(visibleCards.length / PAGE_SIZE));
+      var totalPages = getTotalPages(section);
       if (pageAttr > totalPages) pageAttr = totalPages;
+      if (pageAttr < 1) pageAttr = 1;
       section.setAttribute('data-page', String(pageAttr));
 
       visibleCards.forEach(function (card, i) {
@@ -3113,12 +3143,29 @@
       section.querySelectorAll('.page-indicator').forEach(function (indicator) {
         indicator.textContent = 'Page ' + pageAttr + ' of ' + totalPages;
       });
-      section.querySelectorAll('.prev-page').forEach(function (btn) {
+      section.querySelectorAll('.prev-page, .first-page').forEach(function (btn) {
         btn.disabled = pageAttr <= 1;
       });
-      section.querySelectorAll('.next-page').forEach(function (btn) {
+      section.querySelectorAll('.next-page, .last-page').forEach(function (btn) {
         btn.disabled = pageAttr >= totalPages;
       });
+      section.querySelectorAll('.page-jump-input').forEach(function (input) {
+        input.max = String(totalPages);
+      });
+    }
+
+    function goToPage(section, page) {
+      section.setAttribute('data-page', String(page));
+      repaginateVisible(section);
+    }
+
+    function jumpToPage(section) {
+      var input = section.querySelector('.page-jump-input');
+      var value = parseInt(input.value, 10);
+      if (!value) return;
+      var totalPages = getTotalPages(section);
+      goToPage(section, Math.min(Math.max(1, value), totalPages));
+      input.value = '';
     }
 
     function formatElapsedClientSide(timestampIso, now) {
@@ -3211,15 +3258,33 @@
         section.querySelectorAll('.prev-page').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var page = parseInt(section.getAttribute('data-page') || '1', 10);
-            section.setAttribute('data-page', String(Math.max(1, page - 1)));
-            repaginateVisible(section);
+            goToPage(section, Math.max(1, page - 1));
           });
         });
         section.querySelectorAll('.next-page').forEach(function (btn) {
           btn.addEventListener('click', function () {
             var page = parseInt(section.getAttribute('data-page') || '1', 10);
-            section.setAttribute('data-page', String(page + 1));
-            repaginateVisible(section);
+            goToPage(section, page + 1);
+          });
+        });
+        section.querySelectorAll('.first-page').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            goToPage(section, 1);
+          });
+        });
+        section.querySelectorAll('.last-page').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            goToPage(section, getTotalPages(section));
+          });
+        });
+        section.querySelectorAll('.page-jump-btn').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            jumpToPage(section);
+          });
+        });
+        section.querySelectorAll('.page-jump-input').forEach(function (input) {
+          input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') jumpToPage(section);
           });
         });
       });
