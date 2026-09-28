@@ -14,6 +14,8 @@
     padding: 24px;
   }
   h1 { font-size: 22px; margin: 0 0 20px; text-align: center; }
+  .toolbar { display: flex; justify-content: center; margin-bottom: 12px; }
+  .hide-sent-toggle { font-size: 13px; color: #374151; display: flex; align-items: center; gap: 6px; cursor: pointer; }
   .tabs {
     display: flex;
     justify-content: center;
@@ -131,6 +133,9 @@
 </head>
 <body>
 <h1>Job Matches</h1>
+<div class="toolbar">
+  <label class="hide-sent-toggle"><input type="checkbox" id="hideSentToggle"> Hide roles I've sent a CV to</label>
+</div>
 <div class="tabs">
 <button type="button" class="tab-btn active" data-tab="strong_match" style="--tier-accent: #22c55e">🟢 Strong Match <span class="count">(123)</span></button>
 <button type="button" class="tab-btn" data-tab="worth_a_look" style="--tier-accent: #eab308">🟡 Worth a Look <span class="count">(132)</span></button>
@@ -150,7 +155,7 @@
     <h3>Full Stack Software Engineer</h3>
     <span class="company">Silverfort</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-28T13:15:15.588Z">Posted: 45 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-28T13:15:15.588Z">Posted: 1 hour ago</span></div>
   <p class="reason">Candidate has primary stack expertise in Angular, TypeScript, and Node.js/Express matching core requirements, plus exposure to relevant backend patterns and modern tooling (Redis, AWS) that transfers well to high-performance security data processing systems.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4387110788/" target="_blank" rel="noopener">View posting</a>
@@ -1760,7 +1765,7 @@
     <h3>Full Stack Software Engineer - AI-First</h3>
     <span class="company">Jobgether</span>
   </div>
-  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-28T13:18:15.588Z">Posted: 42 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-28T13:18:15.588Z">Posted: 1 hour ago</span></div>
   <p class="reason">Strong match on Angular/TypeScript frontend and AI tooling interest, but Java/Spring Boot backend is exposure-level skill rather than primary stack, making this a solid fit that doesn't outrank Java-primary roles but remains highly relevant.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4471373840/" target="_blank" rel="noopener">View posting</a>
@@ -3981,7 +3986,7 @@
     <h3>Java Software Engineer</h3>
     <span class="company">Extreme</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-22T14:28:01.537Z">Posted: 5 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-22T14:28:01.537Z">Posted: 6 days ago</span></div>
   <p class="reason">Java is exposure-level skill only (not primary stack), but the role requires 5+ years Java/Spring/Microservices as hard requirements; candidate has strong AI tooling experience (Anthropic API match) and NoSQL exposure (MongoDB) that align with job needs, making this a plausible transfer despite the primary stack mismatch.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4470449436/" target="_blank" rel="noopener">View posting</a>
@@ -3994,7 +3999,7 @@
     <h3>Senior Software Engineer</h3>
     <span class="company">Extreme</span>
   </div>
-  <div class="job-meta"><span class="job-location">North District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-22T14:19:01.537Z">Posted: 5 days ago</span></div>
+  <div class="job-meta"><span class="job-location">North District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-22T14:19:01.537Z">Posted: 6 days ago</span></div>
   <p class="reason">While this is a legitimate software engineering role requiring algorithmic and systems thinking that could transfer from your backend/full-stack expertise, the primary stack (Modern C++ and Python) falls outside your daily-driver technologies, and there's no overlap with your exposure skills in these core requirements.</p>
   <div class="job-actions">
     <a class="apply-link" href="https://www.linkedin.com/jobs/view/4459309883/" target="_blank" rel="noopener">View posting</a>
@@ -5907,6 +5912,8 @@
     var PAGE_SIZE = 10;
     var DISMISSED_KEY = 'jobMatcherDismissed';
     var SENT_CV_KEY = 'jobMatcherSentCv';
+    var HIDE_SENT_KEY = 'jobMatcherHideSent';
+    var hideSentEnabled = false;
 
     function loadSet(key) {
       try {
@@ -5925,11 +5932,15 @@
       }
     }
 
+    function isCardVisible(card) {
+      if (card.getAttribute('data-dismissed') === 'true') return false;
+      if (hideSentEnabled && card.classList.contains('sent-cv')) return false;
+      return true;
+    }
+
     function getVisibleCards(section) {
       var allCards = section.querySelectorAll('.job-card');
-      return Array.prototype.filter.call(allCards, function (c) {
-        return c.getAttribute('data-dismissed') !== 'true';
-      });
+      return Array.prototype.filter.call(allCards, isCardVisible);
     }
 
     function getTotalPages(section) {
@@ -5937,11 +5948,20 @@
     }
 
     function repaginateVisible(section) {
-      // Re-run the display pass over ALL cards (including hidden-by-dismiss ones,
-      // which stay display:none permanently) using the current page.
-      var visibleCards = getVisibleCards(section);
+      // Re-run the display pass over ALL cards - hidden ones (dismissed, or
+      // hidden by the sent-CV toggle) always get display:none here, since
+      // toggling hideSentEnabled can newly hide/reveal cards on every call.
+      var allCards = section.querySelectorAll('.job-card');
+      var visibleCards = [];
+      Array.prototype.forEach.call(allCards, function (card) {
+        if (isCardVisible(card)) {
+          visibleCards.push(card);
+        } else {
+          card.style.display = 'none';
+        }
+      });
       var pageAttr = parseInt(section.getAttribute('data-page') || '1', 10);
-      var totalPages = getTotalPages(section);
+      var totalPages = Math.max(1, Math.ceil(visibleCards.length / PAGE_SIZE));
       if (pageAttr > totalPages) pageAttr = totalPages;
       if (pageAttr < 1) pageAttr = 1;
       section.setAttribute('data-page', String(pageAttr));
@@ -6026,9 +6046,7 @@
       var section = document.querySelector('.tier-section[data-tier="' + tier + '"]');
       var tabBtn = document.querySelector('.tab-btn[data-tab="' + tier + '"]');
       if (!section || !tabBtn) return;
-      var remaining = Array.prototype.filter.call(section.querySelectorAll('.job-card'), function (c) {
-        return c.getAttribute('data-dismissed') !== 'true';
-      }).length;
+      var remaining = Array.prototype.filter.call(section.querySelectorAll('.job-card'), isCardVisible).length;
       var countSpan = tabBtn.querySelector('.count');
       if (countSpan) countSpan.textContent = '(' + remaining + ')';
     }
@@ -6039,6 +6057,13 @@
 
       var dismissed = loadSet(DISMISSED_KEY);
       var sentCv = loadSet(SENT_CV_KEY);
+      try {
+        hideSentEnabled = localStorage.getItem(HIDE_SENT_KEY) === 'true';
+      } catch (e) {
+        hideSentEnabled = false;
+      }
+      var hideSentToggle = document.getElementById('hideSentToggle');
+      if (hideSentToggle) hideSentToggle.checked = hideSentEnabled;
 
       document.querySelectorAll('.job-card').forEach(function (card) {
         var id = card.getAttribute('data-job-id');
@@ -6110,9 +6135,25 @@
         });
       });
 
+      if (hideSentToggle) {
+        hideSentToggle.addEventListener('change', function () {
+          hideSentEnabled = hideSentToggle.checked;
+          try {
+            localStorage.setItem(HIDE_SENT_KEY, String(hideSentEnabled));
+          } catch (e) {
+            // localStorage unavailable - preference just won't persist across reloads
+          }
+          document.querySelectorAll('.tier-section').forEach(function (section) {
+            repaginateVisible(section);
+            updateTabCount(section.getAttribute('data-tier'));
+          });
+        });
+      }
+
       document.querySelectorAll('.sent-cv-checkbox').forEach(function (checkbox) {
         checkbox.addEventListener('change', function () {
           var card = checkbox.closest('.job-card');
+          var section = checkbox.closest('.tier-section');
           var id = card.getAttribute('data-job-id');
           if (checkbox.checked) {
             sentCv.add(id);
@@ -6122,6 +6163,9 @@
             card.classList.remove('sent-cv');
           }
           saveSet(SENT_CV_KEY, sentCv);
+          // Only matters live when the hide-sent toggle is on - otherwise this is a no-op re-render.
+          repaginateVisible(section);
+          updateTabCount(section.getAttribute('data-tier'));
         });
       });
 
