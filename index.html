@@ -6173,7 +6173,7 @@ Building backend services that run heavy background jobs and talk to each other 
     <h3>Backend Software Engineer</h3>
     <span class="company">Landa</span>
   </div>
-  <div class="job-meta"><span class="job-location">Rehovot, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:41:01.570Z">Posted: 58 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Rehovot, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:41:01.570Z">Posted: 1 hour ago</span></div>
   <p class="reason">Backend role requires C# and .NET as primary stack with C++ experience, which are outside the candidate's daily-driver skills, though strong software engineering fundamentals and some exposure to complex systems integration could transfer</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -10539,6 +10539,7 @@ Building backend services that run heavy background jobs and talk to each other 
     var NOTE_CONFIG = {"model":"claude-opus-5-5","maxTokens":2000,"template":"You write the short note a job seeker pastes into the \"add a note\" box when he sends his CV for a role. It must read like a real person typed it quickly, not like AI.\n\nAbout the candidate. Use ONLY these facts and never invent anything else:\n- Full-stack developer with about 5 years of experience. He currently works full-stack on an AI-powered video generation platform (mention this only when it is relevant to the role).\n- Solid experience (it is fine to say \"solid experience\" about these): Angular (including Angular 17 with SSR, RxJS, Angular Material), TypeScript, Node.js, Express, MongoDB, Redis, Bull job queues, Socket.IO, FFmpeg, AWS (Lambda, API Gateway, DynamoDB, SQS, EC2), working with LLM APIs (Anthropic, OpenAI, Google Gemini), and building backend services that run heavy jobs in the background and talk to each other through queues.\n- Some experience (never call it \"solid\"): React, React Native (a personal project), Java, C, Docker, Stripe, WebRTC, Kafka, Elasticsearch, n8n, Azure.\n- Not listed, so never claim or imply any of it: Go, Python, C++, .NET, Kubernetes, SQL databases, or anything else not listed above.\n\nRules for the note:\n- 2 to 4 short sentences, roughly 35 to 75 words, plain text. Start with \"Hi,\". No name, no sign-off, no subject line.\n- First person, plain everyday words, like a quick message. Slightly casual is fine.\n- Opening style for this note: {{opener}}\n- Never say he is applying, or that he is writing about the role, and do not open with the job title. The note is already attached to his application, so that is obvious.\n- Do not open with \"I saw\" or with his years of experience, and do not always describe his current platform.\n- Avoid stock phrases such as \"lines up\", \"caught my attention\", \"is the kind of work\", \"a nice change\" and \"my stack\". Say it plainly in your own words instead.\n- Say what he works with that matches this role (one or two items, not a list of everything) and mention one specific thing from this posting, like the product, the team, or the kind of work. Do not copy phrases from the posting.\n- Do not add a line saying the role \"sounds interesting\" or \"sounds like a fun problem\". If you show interest, say something concrete and different each time.\n- Use \"solid experience\" at most once, and only for a skill from the solid list that this role actually needs.\n- Only state things that appear in the facts above. Never invent activities, responsibilities or feelings (for example mentoring or leading people, designing schemas, building AI agents, or \"I enjoy X\"), never compare the role with his current job, and never say a role is \"close to what I do day to day\". Just state the skills that match.\n- Never mention skills he is missing or unsure about, and do not add time claims such as \"lately\" or \"recently\".\n- Do not name his current employer.\n- Never use em dashes, semicolons, exclamation marks, bullet points or emojis. Never use words like excited, thrilled, passionate, eager, leverage, delve, seamless, \"I am writing to\", \"I believe\", \"perfect fit\" or \"ideal candidate\".\n- End with a short closing such as \"CV attached, happy to chat.\" and vary the wording.\n- Write in English.\n- Output only the note text, nothing else.\n\nThe role:\nTitle: {{title}}\nCompany: {{company}}\nLocation: {{location}}\nPosting:\n{{description}}","openers":["start by saying what he builds, with one skill that matches the role.","start with one concrete thing about the product or the team, in your own words.","start with the part of the role that matches his work best, stated plainly.","start with the kind of problem the role solves, then what he brings to it.","start with one matching skill and how he uses it, using only the facts above."]};
     var notesData = {};
     var localNotes = {};
+    var serverNotes = {};
 
     function fillPromptTemplate(template, vars) {
   return String(template).replace(/\{\{(\w+)\}\}/g, function (match, key) {
@@ -10564,6 +10565,13 @@ Building backend services that run heavy background jobs and talk to each other 
   if (/\bappl(?:y|ying)\b/i.test(note)) return 'says he is applying';
   if (/nice change|change from/i.test(note)) return 'invents a comparison';
   return '';
+}
+
+    function chooseNoteText(saved, serverNote) {
+  if (saved && typeof saved === 'object' && saved.b === serverNote && typeof saved.t === 'string') {
+    return saved.t;
+  }
+  return serverNote;
 }
 
     function pickOpenerHint(hints, random) {
@@ -10973,7 +10981,7 @@ Building backend services that run heavy background jobs and talk to each other 
     }
 
     function saveNote(id, value) {
-      localNotes[id] = value;
+      localNotes[id] = { t: value, b: serverNotes[id] || '' };
       saveMap(NOTES_KEY, localNotes);
     }
 
@@ -11094,7 +11102,13 @@ Building backend services that run heavy background jobs and talk to each other 
         var textarea = card.querySelector('.note-text');
         if (!textarea) return;
         var cardId = card.getAttribute('data-job-id');
-        if (Object.prototype.hasOwnProperty.call(localNotes, cardId)) textarea.value = localNotes[cardId];
+        serverNotes[cardId] = textarea.value;
+        textarea.value = chooseNoteText(localNotes[cardId], serverNotes[cardId]);
+        if (Object.prototype.hasOwnProperty.call(localNotes, cardId) && textarea.value === serverNotes[cardId] && localNotes[cardId].t !== serverNotes[cardId]) {
+          // The server's note was rewritten since this one was saved, so the stale saved copy is dropped.
+          delete localNotes[cardId];
+          saveMap(NOTES_KEY, localNotes);
+        }
         refreshNoteUi(card);
         textarea.addEventListener('input', function () {
           saveNote(cardId, textarea.value);
