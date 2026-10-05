@@ -2955,7 +2955,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">InfraEdge IL</span>
   </div>
-  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:35:01.570Z">Posted: 37 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Ramat Gan, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:35:01.570Z">Posted: 40 minutes ago</span></div>
   <p class="reason">Strong frontend match with Angular 16+ and TypeScript, plus relevant exposure skills (Kafka, AWS), but primary backend requirement is C#/.NET which is outside both skill lists, making it a solid lateral fit rather than ideal alignment.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -2978,7 +2978,7 @@
     <h3>Senior Backend Engineer, Customer-Facing R&amp;D</h3>
     <span class="company">Apono</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T10:14:35.184Z">Posted: 1 hour ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T10:14:35.184Z">Posted: 2 hours ago</span></div>
   <p class="reason">Strong backend fundamentals and production experience align well, but the role emphasizes Go/Kotlin/JVM and cloud-native infrastructure (Kubernetes, Docker, IAM) where your primary stack has limited overlap—Node.js/Express could work but isn't the preferred backend language, and cloud platform expertise is mentioned as a core requirement rather than nice-to-have.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -6172,7 +6172,7 @@
     <h3>Backend Software Engineer</h3>
     <span class="company">Landa</span>
   </div>
-  <div class="job-meta"><span class="job-location">Rehovot, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:41:01.570Z">Posted: 31 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Rehovot, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:41:01.570Z">Posted: 34 minutes ago</span></div>
   <p class="reason">Backend role requires C# and .NET as primary stack with C++ experience, which are outside the candidate's daily-driver skills, though strong software engineering fundamentals and some exposure to complex systems integration could transfer</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -6195,7 +6195,7 @@
     <h3>Senior Engineer - Cloud</h3>
     <span class="company">CrowdStrike</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:17:01.570Z">Posted: 55 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T11:17:01.570Z">Posted: 58 minutes ago</span></div>
   <p class="reason">Role is Python/Django-primary backend with strong emphasis on Python internals and AI agent extension (Claude Code MCP servers), while your primary stack is Node.js/TypeScript; MongoDB experience (bonus points) is a secondary skill for you, and you have no direct Python experience listed despite it being a core requirement.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -10568,7 +10568,6 @@
   var PAGE_HEIGHT = 842;
   var MARGIN = 72;
   var BODY_SIZE = 11;
-  var HEADING_SIZE = 12;
   var LINE_HEIGHT = 16;
 
   function plain(text) {
@@ -10590,20 +10589,20 @@
     return PUNCT[ch] || 556;
   }
 
-  function textWidth(text, size, factor) {
+  function textWidth(text, size) {
     var total = 0;
     for (var i = 0; i < text.length; i++) total += charWidth(text.charAt(i));
-    return (total * size * factor) / 1000;
+    return (total * size) / 1000;
   }
 
-  function wrap(text, size, factor) {
+  function wrap(text, size) {
     var maxWidth = PAGE_WIDTH - 2 * MARGIN;
     var lines = [];
     var current = '';
     text.split(' ').forEach(function (word) {
-      while (textWidth(word, size, factor) > maxWidth) {
+      while (textWidth(word, size) > maxWidth) {
         var cut = word.length - 1;
-        while (cut > 1 && textWidth(word.slice(0, cut), size, factor) > maxWidth) cut--;
+        while (cut > 1 && textWidth(word.slice(0, cut), size) > maxWidth) cut--;
         if (current) {
           lines.push(current);
           current = '';
@@ -10612,7 +10611,7 @@
         word = word.slice(cut);
       }
       var candidate = current ? current + ' ' + word : word;
-      if (current && textWidth(candidate, size, factor) > maxWidth) {
+      if (current && textWidth(candidate, size) > maxWidth) {
         lines.push(current);
         current = word;
       } else {
@@ -10627,27 +10626,22 @@
     return text.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
   }
 
+  // Just the note, then the name on its own line. Deliberately no heading or "Best regards".
   var lines = [];
-  var role = plain(parts.role).trim();
-  var company = plain(parts.company).trim();
-  var heading = 'Re: ' + (role || 'your open role') + (company ? ' at ' + company : '');
-  wrap(heading, HEADING_SIZE, 1.08).forEach(function (line) {
-    lines.push({ text: line, bold: true });
-  });
-  lines.push({ text: '', bold: false });
   plain(parts.body).split('\n').forEach(function (paragraph) {
     if (!paragraph.trim()) {
-      lines.push({ text: '', bold: false });
+      lines.push('');
       return;
     }
-    wrap(paragraph.trim(), BODY_SIZE, 1).forEach(function (line) {
-      lines.push({ text: line, bold: false });
+    wrap(paragraph.trim(), BODY_SIZE).forEach(function (line) {
+      lines.push(line);
     });
   });
-  lines.push({ text: '', bold: false });
-  lines.push({ text: 'Best regards,', bold: false });
   var signer = plain(parts.name).trim();
-  if (signer) lines.push({ text: signer, bold: false });
+  if (signer) {
+    lines.push('');
+    lines.push(signer);
+  }
 
   var linesPerPage = Math.floor((PAGE_HEIGHT - 2 * MARGIN) / LINE_HEIGHT);
   var pages = [];
@@ -10658,22 +10652,21 @@
   var objects = [];
   objects[0] = '<< /Type /Catalog /Pages 2 0 R >>';
   objects[2] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>';
-  objects[3] = '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>';
   var kids = [];
   pages.forEach(function (pageLines, index) {
-    var pageNumber = 5 + 2 * index;
+    var pageNumber = 4 + 2 * index;
     var contentNumber = pageNumber + 1;
     var y = PAGE_HEIGHT - MARGIN - BODY_SIZE;
     var stream = '';
     pageLines.forEach(function (line) {
-      if (line.text) {
-        stream += 'BT /' + (line.bold ? 'F2 ' + HEADING_SIZE : 'F1 ' + BODY_SIZE) + ' Tf 1 0 0 1 ' + MARGIN + ' ' + y + ' Tm (' + escapePdf(line.text) + ') Tj ET\n';
+      if (line) {
+        stream += 'BT /F1 ' + BODY_SIZE + ' Tf 1 0 0 1 ' + MARGIN + ' ' + y + ' Tm (' + escapePdf(line) + ') Tj ET\n';
       }
       y -= LINE_HEIGHT;
     });
     kids.push(pageNumber + ' 0 R');
     objects[pageNumber - 1] =
-      '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ' + PAGE_WIDTH + ' ' + PAGE_HEIGHT + '] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents ' + contentNumber + ' 0 R >>';
+      '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ' + PAGE_WIDTH + ' ' + PAGE_HEIGHT + '] /Resources << /Font << /F1 3 0 R >> >> /Contents ' + contentNumber + ' 0 R >>';
     objects[contentNumber - 1] = '<< /Length ' + stream.length + ' >>\nstream\n' + stream + 'endstream';
   });
   objects[1] = '<< /Type /Pages /Kids [' + kids.join(' ') + '] /Count ' + pages.length + ' >>';
@@ -10916,7 +10909,7 @@
         name = askForLetterName();
         if (name === null) return;
       }
-      var bytes = buildLetterPdf({ name: name, company: job.company, role: job.title, body: textarea.value });
+      var bytes = buildLetterPdf({ name: name, body: textarea.value });
       var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
       var link = document.createElement('a');
       link.href = url;
