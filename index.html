@@ -15,6 +15,7 @@
   }
   h1 { font-size: 22px; margin: 0 0 20px; text-align: center; }
   .toolbar { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+  .sent-count { font-size: 13px; font-weight: 600; color: #374151; }
   .hide-sent-toggle { font-size: 13px; color: #374151; display: flex; align-items: center; gap: 6px; cursor: pointer; }
   .note-key-btn {
     background: #ffffff;
@@ -167,6 +168,7 @@
 <body>
 <h1>Job Matches</h1>
 <div class="toolbar">
+  <span id="sentCount" class="sent-count">CV sent to 0 roles</span>
   <label class="hide-sent-toggle"><input type="checkbox" id="hideSentToggle"> Hide roles I've sent a CV to</label>
   <button type="button" id="noteKeyBtn" class="note-key-btn">API key for notes: not set</button>
   <button type="button" id="letterNameBtn" class="note-key-btn">Name for letters: not set</button>
@@ -190,7 +192,7 @@
     <h3>Frontend Developer</h3>
     <span class="company">Lawyal</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T11:11:26.416Z">Posted: 30 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T11:11:26.416Z">Posted: 49 minutes ago</span></div>
   <p class="reason">Candidate's primary stack includes Angular, TypeScript, RxJS, and JavaScript fundamentals—all core requirements—with substantial production experience across the full tech stack.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -627,7 +629,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">Linx Security</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-29T11:47:57.764Z">Posted: 6 days ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-09-29T11:47:57.764Z">Posted: 29/09/2026</span></div>
   <p class="reason">Candidate has primary stack expertise in Node.js, TypeScript, and MongoDB that directly match core backend/frontend requirements, with proven full-stack capabilities and exposure to relevant DevOps/orchestration patterns through experience with distributed systems and queue management tools.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -3199,7 +3201,7 @@
     <h3>Frontend Developer</h3>
     <span class="company">Admetec</span>
   </div>
-  <div class="job-meta"><span class="job-location">Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T11:01:26.416Z">Posted: 40 minutes ago</span></div>
+  <div class="job-meta"><span class="job-location">Haifa District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T11:01:26.416Z">Posted: 59 minutes ago</span></div>
   <p class="reason">Strong TypeScript and async data handling skills, plus React exposure and AWS cloud experience, but primary stack is Angular rather than Vue/React, and lacks Vue 3 or Nuxt experience that the role emphasizes.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -3268,7 +3270,7 @@
     <h3>Trenches / Web3 Frontend Developer</h3>
     <span class="company">Jobgether</span>
   </div>
-  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:00:02.145Z">Posted: 5 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:00:02.145Z">Posted: 6 hours ago</span></div>
   <p class="reason">Strong frontend engineering foundation in Angular/TypeScript and real-time systems (Socket.IO, RxJS, Redis), plus exposure to APIs and performance optimization, but lacks demonstrated Web3/crypto/Solana/EVM production experience which is a core requirement.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -3291,7 +3293,7 @@
     <h3>Senior Fullstack Engineer</h3>
     <span class="company">Finout</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T18:58:57.942Z">Posted: 16 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T18:58:57.942Z">Posted: 17 hours ago</span></div>
   <p class="reason">Primary stack includes Node.js and TypeScript (strong backend match), but React is only an exposure skill whereas the role requires React as a co-equal frontend requirement alongside NodeJS.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -3337,7 +3339,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">CarGeek</span>
   </div>
-  <div class="job-meta"><span class="job-location">Modiin-Maccabim-Reut, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T13:44:57.858Z">Posted: 21 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Modiin-Maccabim-Reut, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T13:44:57.858Z">Posted: 22 hours ago</span></div>
   <p class="reason">Strong primary stack alignment (Angular, TypeScript, Node.js, Express, MongoDB) and exposure to React covers the frontend requirements, but the role emphasizes Python/Django/FastAPI backend which sits outside the primary daily-driver stack, making it a solid fit for the role type but not a direct stack match.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -3360,7 +3362,7 @@
     <h3>Full Stack Engineer</h3>
     <span class="company">Airis Labs</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T12:58:58.052Z">Posted: 22 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T12:58:58.052Z">Posted: 23 hours ago</span></div>
   <p class="reason">Strong overlap on full-stack architecture, async systems (Kafka experience listed), and AI tools, but React is exposure-level and Python is not in the skill profile, making it a solid transfer opportunity rather than a primary stack match.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -5890,7 +5892,7 @@
     <h3>Full Stack Developer <span class="closed-badge">Closed</span></h3>
     <span class="company">Finagra</span>
   </div>
-  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T13:57:57.858Z">Posted: 21 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T13:57:57.858Z">Posted: 22 hours ago</span></div>
   <p class="reason">Strong TypeScript and AI API experience align well with the core stack, but the Python-heavy backend (Morpheus, domain logic) and Postgres focus fall outside primary skills, and Next.js/React are exposure-level rather than daily drivers.</p>
   
   <div class="job-actions">
@@ -6670,7 +6672,7 @@
     <h3>Senior Backend Software Engineer</h3>
     <span class="company">Silverfort</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:45:02.145Z">Posted: 4 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv-Yafo, Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:45:02.145Z">Posted: 5 hours ago</span></div>
   <p class="reason">While you have strong backend development experience with Node.js/Express and exposure to low-level work, the role requires primary expertise in Go/C/C++/Rust for low-level networking and kernel development, which is outside your primary stack.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -6716,7 +6718,7 @@
     <h3>Software Engineer - C / C++</h3>
     <span class="company">Allpha Innovation</span>
   </div>
-  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:00:02.145Z">Posted: 5 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T06:00:02.145Z">Posted: 6 hours ago</span></div>
   <p class="reason">While C is listed in exposure skills, this role is C/C++-primary for systems/embedded development with hardware interfaces, which differs significantly from the candidate's primary full-stack web/cloud stack, though the software engineering foundation and team collaboration experience provide some transferability.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -6739,7 +6741,7 @@
     <h3>Senior Software Engineer - Backend Platform</h3>
     <span class="company">NVIDIA</span>
   </div>
-  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T01:00:01.735Z">Posted: 10 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Raanana, Center District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-06T01:00:01.735Z">Posted: 11 hours ago</span></div>
   <p class="reason">Strong distributed systems and data infrastructure experience, but primary stack (Node.js, TypeScript, Angular) doesn't match the required Go/C++/Rust/Python backend languages, and no demonstrated experience with the low-level systems work (networking, kernel-level concurrency, telemetry platforms) that this role emphasizes.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -6762,7 +6764,7 @@
     <h3>Senior Backend Engineer</h3>
     <span class="company">Remedio</span>
   </div>
-  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T17:47:58.014Z">Posted: 17 hours ago</span></div>
+  <div class="job-meta"><span class="job-location">Tel Aviv District, Israel</span> &middot; <span class="job-posted" data-posted-timestamp="2026-10-05T17:47:58.014Z">Posted: 18 hours ago</span></div>
   <p class="reason">Backend role with strong distributed systems and scalability requirements matches your experience profile, but the preference for Go and lack of Node.js/Express emphasis in the job description creates a language mismatch with your primary stack.</p>
   <details class="note-box">
     <summary>Note to send</summary>
@@ -11822,6 +11824,12 @@
 
       var dismissed = loadSet(DISMISSED_KEY);
       var sentCv = loadSet(SENT_CV_KEY);
+
+      function refreshSentCount() {
+        var el = document.getElementById('sentCount');
+        if (el) el.textContent = 'CV sent to ' + sentCv.size + (sentCv.size === 1 ? ' role' : ' roles');
+      }
+      refreshSentCount();
       try {
         hideSentEnabled = localStorage.getItem(HIDE_SENT_KEY) === 'true';
       } catch (e) {
@@ -11928,6 +11936,7 @@
             card.classList.remove('sent-cv');
           }
           saveSet(SENT_CV_KEY, sentCv);
+          refreshSentCount();
           // Only matters live when the hide-sent toggle is on - otherwise this is a no-op re-render.
           repaginateVisible(section);
           updateTabCount(section.getAttribute('data-tier'));
